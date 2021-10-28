@@ -45,12 +45,18 @@ public class BasicJavaTest {
         // System.out.println(numsGreaterThanY);
 
         // square values
-        int[] initialArray = {1,2,3,4,5,6,7};
-        ArrayList<Integer> myArraySquared = new ArrayList<Integer>();
-        myArraySquared = basicJavaBot.squareArray(initialArray);
-        System.out.println(myArraySquared);
+        // int[] initialArray = {-1,2,3,4,5,6,7,8};
+        // ArrayList<Integer> myArraySquared = new ArrayList<Integer>();
+        // myArraySquared = basicJavaBot.squareArray(initialArray);
+        // System.out.println(myArraySquared);
 
+        // Eliminate Negative Values
+        // int[] initialArrayCheckNegatives = {-1,2,-3,4,5,-6,7,8};
+        // ArrayList<Integer> myArrayNoNegatives = new ArrayList<Integer>();
+        // myArrayNoNegatives = basicJavaBot.noNegativeArray(initialArrayCheckNegatives);
+        // System.out.println(myArrayNoNegatives);
 
+        // Sensei Bonuses
 
     }
 }

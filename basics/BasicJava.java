@@ -90,7 +90,7 @@ public class BasicJava {
     // square the values
     public ArrayList<Integer> squareArray(int[] array) {
         ArrayList<Integer> squaredList = new ArrayList<Integer>();
-        for (int i=0; i <= array.length; i++) {
+        for (int i=0; i < array.length; i++) {
             int squared = array[i] * array[i];
             squaredList.add(squared);
         }
@@ -98,6 +98,17 @@ public class BasicJava {
     }
 
     // eliminate negative values
+    public ArrayList<Integer> noNegativeArray(int[] array) {
+        ArrayList<Integer> newList = new ArrayList<Integer>();
+        for (int i=0; i < array.length; i++) {
+            if (array[i] < 0) {
+                newList.add(0);
+            } else {
+                newList.add(i);
+            }
+        }
+        return newList;
+    }
 
     // SENSEI BONUS SECTION
 
