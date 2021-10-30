@@ -55,7 +55,7 @@ public class BasicJava {
     // array with odd numbers
     public ArrayList<Integer> arrayWithOddNumbers(int topNumber) {
         ArrayList<Integer> oddNumList = new ArrayList<Integer>();
-        for (int i=0; i <= topNumber; i++) {
+        for (int i=0; i < topNumber; i++) {
             if (i%2 == 1) {
                 oddNumList.add(i);
             }
@@ -113,8 +113,38 @@ public class BasicJava {
     // SENSEI BONUS SECTION
 
     // Max, Min, and Average
+    public int[] maxMinAverage(int[] arrayToBeReviewed) {
+        int sum = 0;
+        int average;
+        int min = arrayToBeReviewed[0];
+        int max = arrayToBeReviewed[0];
+        int [] maxMinAverage = new int[3];
+        for (int i=1; i < arrayToBeReviewed.length; i++) {
+            sum += arrayToBeReviewed[i];
+            if (arrayToBeReviewed[i] < min) {
+                min = arrayToBeReviewed[i];
+            }
+            if (arrayToBeReviewed[i] > max) {
+                max = arrayToBeReviewed[i];
+            }
+        }
+        average = (sum / arrayToBeReviewed.length);
+        maxMinAverage[0] = max;
+        maxMinAverage[1] = min;
+        maxMinAverage[2] = average;
+
+        return maxMinAverage;
+    }
 
     // Shifting the values in the Array
-
-
+    public int[] shiftArray(int[] arrayToBeShifted) {
+        for (int i=0; i < arrayToBeShifted.length; i++) {
+            if (i < arrayToBeShifted.length-1) {
+                arrayToBeShifted[i] = arrayToBeShifted[i+1];
+            } else {
+                arrayToBeShifted[i] = 0;
+            }    
+        }
+        return arrayToBeShifted;
+    }
 }
