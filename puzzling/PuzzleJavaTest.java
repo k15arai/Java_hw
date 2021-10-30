@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -19,8 +20,11 @@ public class PuzzleJavaTest {
         // generatePassword test
         String randomPassword = generator.generatePassword();
         System.out.println(randomPassword);
-        // ...
-        // Write your other test cases here
-        // ...
+
+        // shuffleArray test
+        int[] testArray = {1,2,3,4,5,6,7,8,9};
+        int[] shuffledArray = generator.shuffleArray(testArray);
+        System.out.println(Arrays.toString(shuffledArray));
+
     }
 }

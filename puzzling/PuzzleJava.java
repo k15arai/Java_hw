@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.ArrayList;
 // You will need to import the Random library from java.util
 import java.util.Random;
@@ -44,6 +45,20 @@ public class PuzzleJava {
     }
 // SENSEI BONUS SECTION
 // shuffleArray
-// Write a method that takes an array and and mixes up all the values in a pseudo-random way. Hint: use random indexes within the array, and swap values repeatedly. 
-
+// Write a method that takes an array and and mixes up all the values in a pseudo-random way. 
+// Hint: use random indexes within the array, and swap values repeatedly. 
+    public int[] shuffleArray(int[] arrayToBeShuffled) {
+        // ArrayList<Integer> newShuffledArray = new ArrayList<Integer>(array.length);
+        for (int i=0; i<arrayToBeShuffled.length; i++) {
+            int src = i;
+            int dest = randomMachine.nextInt(arrayToBeShuffled.length);
+            int temp = arrayToBeShuffled[dest];
+            arrayToBeShuffled[dest] = arrayToBeShuffled[src];
+            arrayToBeShuffled[src] = temp;
+            // System.out.println("Source:" + src + " " + "Array at source:" + arrayToBeShuffled[src]);
+            // System.out.println("This is the destination:" + dest);
+            // System.out.println("This is the current array" + Arrays.toString(arrayToBeShuffled));
+        }
+        return arrayToBeShuffled;
+    }
 }
